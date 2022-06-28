@@ -1,14 +1,14 @@
 {
   "name": "HisNotes",
   "short_name": "HisNotes",
-  "start_url": "/hisnotes/",
-  "scope": "/hisnotes/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/hisnotes/favicon.svg",
+      "src": "/favicon.svg",
       "sizes": "512x512"
     }
   ]
