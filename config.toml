@@ -27,9 +27,14 @@ enableGitInfo = true
   weight = 1
 
 [languages.zh]
-  languageName = 'Chinese'
+  languageName = 'Pre-Tang'
   contentDir = 'content.zh'
   weight = 2
+
+[languages.zh]
+  languageName = 'Since Tang'
+  contentDir = 'content.zh2'
+  weight = 3
 
 [menu]
 # [[menu.before]]
