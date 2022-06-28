@@ -31,7 +31,7 @@ enableGitInfo = true
   contentDir = 'content.zh'
   weight = 2
 
-[languages.zh]
+[languages.zh2]
   languageName = 'Since Tang'
   contentDir = 'content.zh2'
   weight = 3
