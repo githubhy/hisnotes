@@ -2,7 +2,7 @@
 
 # `baseURL` should be changed according to:
 # https://gohugo.io/hosting-and-deployment/hosting-on-github/#change-baseurl-in-configtoml
-baseURL = 'https://githubhy.github.io/
+baseURL = 'https://githubhy.github.io/'
 title = 'HisNotes'
 theme = 'hugo-book'
 
