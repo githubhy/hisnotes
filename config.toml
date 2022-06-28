@@ -1,6 +1,6 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL = 'https://example.com/'
+baseURL = 'https://githubhy.github.io/hisnotes/' # https://discourse.gohugo.io/t/no-theme-or-images-in-generated-html-files/28257/2
 title = 'HisNotes'
 theme = 'hugo-book'
 
