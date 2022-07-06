@@ -1,0 +1,15 @@
+{{ partial "docs/inject/toc-before" . }}
+{{/*  {{ $currentPage := .}}
+{{ $pages := .RegularPages }}
+{{ if and (not .RegularPages) .Parent }}
+    {{ $pages = .Parent.RegularPages }}
+{{ end }}
+{{ range $pages }}
+    {{ $link_pre := "href=\"" }}
+    {{ if eq $currentPage . }}
+        {{ $link_pre = "class=\"toc-active\" href=\"" }}
+    {{ end }}
+    {{ replace .TableOfContents "href=\"#" (printf "%s%s%s" $link_pre .RelPermalink "#") | safeHTML }}
+{{ end }}  */}}
+{{ .TableOfContents }}
+{{ partial "docs/inject/toc-after" . }}
