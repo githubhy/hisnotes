@@ -19,6 +19,19 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          # Semantic version range syntax or exact version of a Python version
+          python-version: '3.9'
+      - name: Process Books for Hugo
+        run: |
+          sudo apt-get install -y graphviz graphviz-dev
+          python -m pip install --upgrade pip
+          pip install -r tools/proc_book/requirements.txt
+          pytest
+          python tools/proc_book/proc_tags.py --output_dir content.zh/docs/ --hugofy tools/books/
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
