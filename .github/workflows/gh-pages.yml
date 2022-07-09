@@ -6,7 +6,10 @@ on:
     branches:
       - main  # Set a branch name to trigger deployment
   pull_request:
-
+  workflow_run:
+    workflows: [Update Submodules]
+    types:
+      - completed
 
 jobs:
   deploy:
@@ -30,7 +33,7 @@ jobs:
       - name: Process Books for Hugo
         run: |
           bash tools/setup.sh
-          python tools/proc_book/proc_tags.py --output_dir content.zh/docs/ --hugofy tools/books/
+          python tools/proc_book/proc_tags.py --output_dir content.zh/docs/ --hugofy --multicores tools/books/
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
