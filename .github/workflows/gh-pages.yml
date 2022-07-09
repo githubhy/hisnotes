@@ -1,14 +1,12 @@
 name: GitHub Pages
 
+
 on:
   push:
     branches:
       - main  # Set a branch name to trigger deployment
   pull_request:
-  workflow_run:
-    workflows: [Update Submodules]
-    types:
-      - completed
+
 
 jobs:
   deploy:
