@@ -5,6 +5,10 @@ on:
     branches:
       - main  # Set a branch name to trigger deployment
   pull_request:
+  workflow_run:
+    workflows: [Update Submodules]
+    types:
+      - completed
 
 jobs:
   deploy:
@@ -24,12 +28,10 @@ jobs:
         with:
           # Semantic version range syntax or exact version of a Python version
           python-version: '3.9'
+
       - name: Process Books for Hugo
         run: |
-          sudo apt-get install -y graphviz graphviz-dev
-          python -m pip install --upgrade pip
-          pip install -r tools/proc_book/requirements.txt
-          pytest
+          bash tools/setup.sh
           python tools/proc_book/proc_tags.py --output_dir content.zh/docs/ --hugofy tools/books/
 
       - name: Setup Hugo
