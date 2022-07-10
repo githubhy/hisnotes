@@ -33,7 +33,7 @@ jobs:
       - name: Process Books for Hugo
         run: |
           bash tools/setup.sh
-          python tools/proc_book/proc_tags.py --output_dir content.zh/docs/ --hugofy --multicores tools/books/
+          python tools/proc_book/proc_tags.py --output_dir content.zh/docs/ --hugofy --multicores --id_complete_dir content.zh tools/books/
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
