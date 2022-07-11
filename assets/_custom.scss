@@ -26,8 +26,36 @@
 }
 
 .n {
-    color: magenta;
-    font-size: 90%;
+    font-family: 'Fangzheng FangSong JianTi', sans-serif;
+    background-color: var(--gray-200); /* Changing background color */
+    border-radius: 5% / 20%; /* Making border radius */
+    width: auto; /* Making auto-sizable width */
+    height: auto; /* Making auto-sizable height */
+    padding: 0.05em 0.2em 0.05em 0.2em; /* Making space around letters */
+    font-size: 90%; /* Changing font size */
+    opacity: 0.9;
+}
+
+.l {
+    transition: border-bottom 0.1s;
+    border-radius: 5% / 20%;
+}
+
+.l::before {
+    content: "\00a0 ";
+}
+.l::after {
+    content: "\00a0 ";
+}
+
+.l:hover, .l:active {
+    border-bottom: 3px solid var(--gray-500);
+}
+
+.co {
+    font-family: 'Fangzheng FangSong JianTi', sans-serif;
+    font-size: 85%;
+    color: lightsalmon;
 }
 
 a.toc-active {
