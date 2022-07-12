@@ -11,7 +11,7 @@
 .c1 {
     color: RoyalBlue;
     /* background-color: lavender; */
-    font-size: 90%;
+    font-size: 100%;
 }
 
 .c2 {
@@ -59,4 +59,14 @@
 
 a.toc-active {
     color: lightcoral;
+}
+
+figure {
+    text-align: center;
+}
+  
+figcaption {
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
 }
