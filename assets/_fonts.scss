@@ -31,21 +31,25 @@
 }
 
 @font-face {
-  font-family: 'Siyuan Song Regular';
-  src: local(''),
-    url('fonts/SourceHanSerifCN-Regular-1.otf') format("opentype");
+  font-family: 'FangZheng ShuSong JianTi';
+  src: url('fonts/fangzhengshusongjianti-1.woff2') format('woff2'),
+       url('fonts/fangzhengshusongjianti-1.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
   unicode-range: U+4E00-9FFF;
 }
 
 @font-face {
   font-family: 'Fangzheng FangSong JianTi';
-  src: local(''),
-    url('fonts/FangZhengFangSongJianTi-1.ttf') format("truetype");
+  src: url('fonts/fangzhengfangsongjianti-1.woff2') format('woff2'),
+       url('fonts/fangzhengfangsongjianti-1.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
   unicode-range: U+4E00-9FFF;
 }
 
 body {
-  font-family: 'Roboto', 'Siyuan Song Regular', sans-serif;
+  font-family: 'Roboto', 'FangZheng ShuSong JianTi', sans-serif;
 }
 
 code {
