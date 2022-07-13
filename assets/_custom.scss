@@ -25,20 +25,6 @@
     /* font-size: 90%; */
 }
 
-.n {
-    font-family: 'Fangzheng FangSong JianTi', sans-serif;
-    background-color: var(--gray-200); /* Changing background color */
-    border-radius: 5% / 20%; /* Making border radius */
-    width: auto; /* Making auto-sizable width */
-    height: auto; /* Making auto-sizable height */
-    padding: 0.0em 0.2em 0.05em 0.2em; /* top right bottom left */
-    font-size: 85%; /* Changing font size */
-}
-
-.l {
-    transition: border-bottom 0.1s;
-    border-radius: 5% / 20%;
-}
 
 .l::before {
     content: "\00a0 ";
@@ -47,9 +33,62 @@
     content: "\00a0 ";
 }
 
+.l {
+    transition: border-bottom 0.1s;
+    border-radius: 5% / 20%;
+}
+
 .l:hover, .l:active {
     border-bottom: 3px solid var(--gray-500);
 }
+
+// Inline notes and comments
+// .n {
+//     font-family: 'Fangzheng FangSong JianTi', sans-serif;
+//     background-color: var(--gray-200); /* Changing background color */
+//     border-radius: 5% / 20%; /* Making border radius */
+//     width: auto; /* Making auto-sizable width */
+//     height: auto; /* Making auto-sizable height */
+//     padding: 0.0em 0.2em 0.05em 0.2em; /* top right bottom left */
+//     font-size: 100%; /* Changing font size */
+// }
+
+// Notes and comments in tooltips
+.l {
+    display:inline-block;
+    position:relative;
+    border-bottom:3px dotted #666;
+    text-align:center;
+}
+
+.l .n {
+    min-width:150px;
+    top:-20px;
+    left:50%;
+    transform:translate(-50%,-100%);
+    padding:5px 10px;
+    color:#ffffff;
+    background-color:#0087bd;
+    font-weight:normal;
+    font-size:20px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    transition: display 0.5s;
+    visibility:hidden; opacity:0; transition:opacity 0.3s;
+}
+
+.l:hover .n {
+    visibility:visible; opacity:1;
+}
+
+.l:active .n {
+    visibility:visible; opacity:1;
+}
+
+
 
 .co {
     font-family: 'Fangzheng FangSong JianTi', sans-serif;
