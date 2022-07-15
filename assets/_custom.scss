@@ -57,7 +57,7 @@
     border-radius: 5% / 20%;
 }
 
-.l:hover, .l:active {
+.l:hover, .l:focus {
     border-bottom: 3px solid var(--gray-500);
 }
 
@@ -86,8 +86,8 @@
     left:50%;
     transform:translate(-50%,-100%);
     padding:5px 10px;
-    color:#ffffff;
-    background-color:#0087bd;
+    color: var(--body-font-color);
+    background-color: var(--tooltip-background);
     font-weight:normal;
     font-size:20px;
     border-radius:8px;
@@ -103,11 +103,9 @@
     visibility:visible; opacity:1;
 }
 
-.l:active .n {
+.l:focus .n {
     visibility:visible; opacity:1;
 }
-
-
 
 .co {
     font-family: 'Fangzheng FangSong JianTi', sans-serif;
