@@ -9,20 +9,39 @@
 
 
 .c1 {
-    color: RoyalBlue;
+    color: var(--comment-color-1);
     /* background-color: lavender; */
     font-size: 100%;
 }
-
 .c2 {
     /* background-color: LightCyan; */
-    color: PaleVioletRed;
+    color: var(--comment-color-2);
     /* font-size: 90%; */
 }
-
 .c3 {
-    color: SeaGreen;
+    color: var(--comment-color-3);
     /* font-size: 90%; */
+}
+.c1::before {
+    // content: "\329F\3280"
+    content: "\0F3A\1F229";
+}
+.c2::before {
+    // content: "\329F\3281";
+    content: "\0F3A\1F214";
+}
+.c3::before {
+    // content: "\329F\3282";
+    content: "\0F3A\1F22A";
+}
+.c1::after {
+    content: "\1F229\0F3B";
+}
+.c2::after {
+    content: "\1F214\0F3B";
+}
+.c3::after {
+    content: "\1F22A\0F3B";
 }
 
 
@@ -94,6 +113,13 @@
     font-family: 'Fangzheng FangSong JianTi', sans-serif;
     font-size: 85%;
     color: lightsalmon;
+}
+
+a.empty_id {
+    opacity:0;
+}
+a.empty_id:hover, a.empty_id:active {
+    opacity:1;
 }
 
 a.toc-active {

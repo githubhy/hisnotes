@@ -45,6 +45,10 @@ $hint-colors: (
   --hint-color-info: #6bf;
   --hint-color-warning: #fd6;
   --hint-color-danger: #f66;
+
+  --comment-color-1: rgb(3, 19, 190);
+  --comment-color-2: rgb(145, 47, 136);
+  --comment-color-3: rgb(187, 118, 14);
 }
 
 @mixin theme-dark {
@@ -63,4 +67,8 @@ $hint-colors: (
   --hint-color-info: #6bf;
   --hint-color-warning: #fd6;
   --hint-color-danger: #f66;
+
+  --comment-color-1: rgb(191, 196, 255);
+  --comment-color-2: rgb(255, 179, 249);
+  --comment-color-3: rgb(228, 196, 149);
 }
