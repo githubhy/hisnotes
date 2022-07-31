@@ -44,6 +44,12 @@
     content: "\1F22A\0F3B";
 }
 
+.bn::before {
+    content: "《";
+}
+.bn::after {
+    content: "》";
+}
 
 .l::before {
     content: "\00a0 ";
